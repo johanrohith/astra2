@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#212121">
+<title>ASTRA Chat</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <button class="new-chat" id="newChat">＋ New chat</button>
+    <div class="history" id="history"></div>
+    <div class="side-bottom">
+      <button class="side-btn" id="settingsBtn">⚙ Settings</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn mobile-only" id="menuBtn">☰</button>
+      <div class="brand"><span class="logo">✦</span> ASTRA <span class="model">12</span></div>
+      <button class="icon-btn" id="clearBtn" title="Clear conversation">⌫</button>
+    </header>
+
+    <section class="chat" id="chat">
+      <div class="welcome" id="welcome">
+        <div class="big-logo">✦</div>
+        <h1>How can I help you?</h1>
+        <p>Ask anything. Your conversations stay in this browser.</p>
+        <div class="suggestions">
+          <button>Explain quantum computing simply</button>
+          <button>Write a Java program using AWT</button>
+          <button>Help me plan a project</button>
+          <button>Give me creative ideas</button>
+        </div>
+      </div>
+    </section>
+
+    <form class="composer" id="composer">
+      <textarea id="input" rows="1" placeholder="Message ASTRA..." autocomplete="off"></textarea>
+      <button class="send" type="submit" aria-label="Send">↑</button>
+    </form>
+    <div class="disclaimer">ASTRA can make mistakes. Check important information.</div>
+  </main>
+</div>
+
+<div class="modal hidden" id="settings">
+  <div class="modal-card">
+    <div class="modal-head"><h2>Settings</h2><button class="icon-btn" id="closeSettings">×</button></div>
+    <label>API endpoint
+      <input id="endpoint" placeholder="https://your-server.example.com/chat">
+    </label>
+    <label>API key (optional)
+      <input id="apiKey" type="password" placeholder="Stored only in this browser">
+    </label>
+    <p class="hint">For production, put the API key on a server instead of shipping it inside the app.</p>
+    <button class="save" id="saveSettings">Save settings</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
