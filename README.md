@@ -24,3 +24,4 @@ For production, keep your AI provider API key on the server, not in the browser.
 - Custom API endpoint
 - Mobile layout
 - PWA manifest
+
